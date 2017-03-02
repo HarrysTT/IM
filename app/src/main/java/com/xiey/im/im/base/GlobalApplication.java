@@ -1,7 +1,7 @@
 package com.xiey.im.im.base;
 
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 
 import com.facebook.stetho.Stetho;
 import com.github.moduth.blockcanary.BlockCanary;
@@ -9,6 +9,7 @@ import com.github.moduth.blockcanary.BlockCanaryContext;
 import com.github.moduth.blockcanary.internal.BlockInfo;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
+import com.squareup.leakcanary.LeakCanary;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -22,7 +23,7 @@ import okhttp3.OkHttpClient;
  * Created by HarrysTT on 2017/3/2.
  */
 
-public class GlobalApplication extends Application {
+public class GlobalApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {
