@@ -1,7 +1,10 @@
-package com.xiey.im.im;
+package com.xiey.im.im.module_main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.orhanobut.logger.Logger;
+import com.xiey.im.im.R;
 
 public class MainActivity extends AppCompatActivity {
 
