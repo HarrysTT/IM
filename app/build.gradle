@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 apply plugin: 'com.antfortune.freeline'
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'bugly'
@@ -38,10 +37,12 @@ android {
         baoumu71 {
             buildConfigField("boolean", "isTestEnvironment", "true");
             signingConfig signingConfigs.im
+            debuggable true
         }
         kf53 {
             buildConfigField("boolean", "isTestEnvironment", "false");
             signingConfig signingConfigs.im
+            debuggable true
         }
     }
     dexOptions {
